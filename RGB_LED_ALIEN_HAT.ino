@@ -59,7 +59,7 @@ void clearAll() {
 
 void fadeUp(int pin) 
 {
-   for(int i = 255; i > 0; i--)
+   for(int i = 255; i >= 0; i--)
    {
      analogWrite(pin, i);
      delay(10);
@@ -68,7 +68,7 @@ void fadeUp(int pin)
 
 void fadeDown(int pin)
 {
-   for(int i = 0; i < 255; i++) 
+   for(int i = 0; i <= 255; i++) 
    {
      analogWrite(pin, i);
      delay(10);
@@ -77,7 +77,7 @@ void fadeDown(int pin)
 
 void fadeTwoUp(int pin1, int pin2)
 {
-   for(int i = 255; i > 0; i--)
+   for(int i = 255; i >= 0; i--)
    {
      analogWrite(pin1, i);
      analogWrite(pin2, i);
@@ -88,7 +88,7 @@ void fadeTwoUp(int pin1, int pin2)
 
 void fadeTwoDown(int pin1, int pin2)
 {
-   for(int i = 0; i < 255; i++) 
+   for(int i = 0; i <= 255; i++) 
    {
      analogWrite(pin1, i);
      analogWrite(pin2, i);
